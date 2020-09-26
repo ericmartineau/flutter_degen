@@ -15,7 +15,12 @@ executables:
   fluttergen: flutter_degen_command
 
 dependencies:
+  build_runner: ^1.10.1
+  source_gen:
+  build_config:
+  analyzer:
   build: ^1.3.0
+  flutter_degen_annotations:
   args: ^1.6.0
   path: ^1.7.0
   yaml: ^2.2.1

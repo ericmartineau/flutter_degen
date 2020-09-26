@@ -1,17 +1,11 @@
 name: example
 
-flutter_gen:
-  output: lib/gen/
-  lineLength: 80
+dependencies:
+  flutter_degen_annotations:
 
-  integrations:
-    flutter_svg: true
-
-  colors:
-    inputs:
-      - assets/color/colors.xml
-      - assets/color/colors2.xml
-      - assets/color/colors2.xml # duplicated
+dev_dependencies:
+  flutter_degen:
+    path: ../
 
 flutter:
   uses-material-design: true

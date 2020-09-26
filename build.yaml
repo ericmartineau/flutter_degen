@@ -1,13 +1,15 @@
 targets:
   $default:
     builders:
-      flutter_degen:
+      degen:
         enabled: true
 
 builders:
-  flutter_degen:
+  degen:
     import: "package:flutter_degen/build.dart"
-    builder_factories: [ "build" ]
-    build_extensions: { "$lib$": [ ".gen.dart" ] }
+    builder_factories: [ "degenBuilder" ]
+    build_extensions: { ".dart": [ ".degen.g.part" ] }
     auto_apply: dependents
     build_to: source
+    applies_builders: [ "source_gen|combining_builder" ]
+

@@ -2,10 +2,10 @@
 import 'dart:io';
 
 import 'package:dart_style/dart_style.dart';
-import 'package:flutter_gen/src/flutter_generator.dart';
-import 'package:flutter_gen/src/generators/assets_generator.dart';
-import 'package:flutter_gen/src/settings/config.dart';
-import 'package:flutter_gen/src/utils/error.dart';
+import 'package:flutter_degen/src/flutter_generator.dart';
+import 'package:flutter_degen/src/generators/assets_generator.dart';
+import 'package:flutter_degen/src/settings/config.dart';
+import 'package:flutter_degen/src/utils/error.dart';
 import 'package:test/test.dart';
 
 void main() {

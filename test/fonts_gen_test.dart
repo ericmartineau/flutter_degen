@@ -2,9 +2,9 @@
 import 'dart:io';
 
 import 'package:dart_style/dart_style.dart';
-import 'package:flutter_gen/src/generators/fonts_generator.dart';
-import 'package:flutter_gen/src/settings/config.dart';
-import 'package:flutter_gen/src/utils/error.dart';
+import 'package:flutter_degen/src/generators/fonts_generator.dart';
+import 'package:flutter_degen/src/settings/config.dart';
+import 'package:flutter_degen/src/utils/error.dart';
 import 'package:test/test.dart';
 
 void main() {

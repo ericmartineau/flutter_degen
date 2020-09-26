@@ -19,31 +19,8 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   build_runner:
-  flutter_gen:
+  flutter_degen:
     path: ../
-
-flutter_gen:
-  output: lib/gen/ # Optional (default: lib/gen/)
-  lineLength: 80   # Optional (default: 80)
-
-  integrations:
-    flutter_svg: true
-
-  assets:
-    # Assets.imagesChip
-    # style: camel-case
-
-    # Assets.images_chip
-    # style: snake-case
-
-    # Assets.images.chip (default style)
-    # style: dot-delimiter
-
-  colors:
-    inputs:
-      - assets/color/colors.xml
-      - assets/color/colors2.xml
-      - assets/color/colors2.xml # duplicated
 
 flutter:
   uses-material-design: true
