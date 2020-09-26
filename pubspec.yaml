@@ -1,24 +1,17 @@
 name: flutter_degen
-description: The Flutter code generator for your delegates
-version: 0.4.4
+version: 0.4.4+1
 homepage: https://github.com/ericmartineau/flutter_degen
-repository: https://github.com/ericmartineau/flutter_degen
 documentation: https://github.com/ericmartineau/flutter_degen
+description: The Flutter code generator for your delegates
+repository: https://github.com/ericmartineau/flutter_degen
 issue_tracker: https://github.com/ericmartineau/flutter_degen/issues
-authors:
-  - Eric Martineau <eric@sunnyapp.co>
-
-environment:
+environment: 
   sdk: '>=2.7.0 <3.0.0'
-
-executables:
-  fluttergen: flutter_degen_command
-
-dependencies:
+dependencies: 
   build_runner: ^1.10.1
-  source_gen:
-  build_config:
-  analyzer:
+  source_gen: any
+  build_config: any
+  analyzer: any
   build: ^1.3.0
   args: ^1.6.0
   path: ^1.7.0
@@ -28,9 +21,12 @@ dependencies:
   dart_style: ^1.3.6
   dartx: ^0.5.0
   color: ^2.1.1
-
-dev_dependencies:
-  test:
-  test_coverage:
-  effective_dart:
-  build_test:
+dev_dependencies: 
+  test: any
+  test_coverage: any
+  effective_dart: any
+  build_test: any
+executables: 
+  fluttergen: flutter_degen_command
+authors: 
+  - Eric Martineau <eric@sunnyapp.co>
