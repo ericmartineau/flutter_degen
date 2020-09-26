@@ -1,7 +1,7 @@
 import 'package:analyzer/dart/element/element.dart';
-import 'package:flutter_degen_annotations/flutter_degen_annotations.dart';
 import 'package:source_gen/source_gen.dart';
 
+import '../annotations.dart';
 import 'field_annotation_generator.dart';
 
 class DelegateGenerator extends GeneratorForAnnotatedField<delegate> {
@@ -11,9 +11,12 @@ class DelegateGenerator extends GeneratorForAnnotatedField<delegate> {
       FieldElement field, ConstantReader annotation) {
     final includes = annotation.read('include').literalValue as List<String>;
     final excludes = annotation.read('exclude').literalValue as List<String>;
+    final implementDelegate =
+        annotation.read('implementDelegate').literalValue as bool;
+    assert(!implementDelegate || (includes == null && excludes == null),
+        "Implement delegate requires other param to be null");
     List<String> mixin = [];
     final fieldType = field.type;
-
     final parent = field.thisOrAncestorOfType<ClassElement>();
 
     final doesApply = (Element element) {
@@ -32,7 +35,7 @@ class DelegateGenerator extends GeneratorForAnnotatedField<delegate> {
       "}",
       "",
       "",
-      "mixin _${fieldType.element.name}Mixin implements ${fieldType.element.name}Delegate {",
+      "mixin _${fieldType.element.name}Mixin implements ${fieldType.element.name}Delegate${implementDelegate ? ', ${fieldType.element.name}' : ''} {",
       for (final dField in fieldClass.fields)
         if (doesApply(dField))
           "  ${dField.type} get ${dField.name} => ${field.name}.${dField.name};",

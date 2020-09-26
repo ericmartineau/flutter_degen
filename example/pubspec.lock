@@ -203,19 +203,12 @@ packages:
     source: sdk
     version: "0.0.0"
   flutter_degen:
-    dependency: "direct dev"
+    dependency: "direct main"
     description:
       path: ".."
       relative: true
     source: path
     version: "0.4.4"
-  flutter_degen_annotations:
-    dependency: transitive
-    description:
-      name: flutter_degen_annotations
-      url: "https://pub.dartlang.org"
-    source: hosted
-    version: "1.2.0+3"
   flutter_svg:
     dependency: "direct main"
     description:
