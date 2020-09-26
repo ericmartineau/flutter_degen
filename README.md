@@ -1,0 +1,3 @@
+Generates delegates 
+
+TODO:  This
